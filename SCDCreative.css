@@ -1,10 +1,49 @@
 body {
-    background-color: #006666;
-    background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+    background-color: #ffff;
+    /* background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png"); */
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-    cursor: url(./assets/hammerIcon.png),auto;
 }
 
-.NavBar {
-    text-align: justify;
+.navbar {
+    background-color: #ffff;
+}
+
+.navLinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 170px;
+}
+
+.dropDownContent {
+    display: none;
+    background-color: whitesmoke;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropDownContent a {
+display: block;
+color: black;
+padding: 10px;
+text-decoration: none;
+}
+
+.dropdown:hover .dropBtn {
+    background-color: #ffff;
+    }
+
+.dropDownContent a:hover {
+    background-color: #ffff;
+}
+
+.dropdown:hover .dropDownContent {
+display: block;
 }
