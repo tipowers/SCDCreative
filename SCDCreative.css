@@ -1,17 +1,17 @@
 body {
-    background-color: #ffff;
-    /* background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png"); */
+    background-color: #FFFFFF;
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .navbar {
-    background-color: #ffff;
+    background-color: #FFFFFF;
+    margin: 1%;
+    font-size: 120%;
+    text-align: right;
 }
 
 .navLinks {
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .dropdown {
@@ -22,28 +22,116 @@ body {
 
 .dropDownContent {
     display: none;
-    background-color: whitesmoke;
+    background-color: #FFFFFF;
     width: 100%;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.dropDownContent a {
-display: block;
-color: black;
-padding: 10px;
-text-decoration: none;
+.dropDownContent.a {
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .dropdown:hover .dropBtn {
-    background-color: #ffff;
-    }
+    background-color: #FFFFFF;
+}
 
 .dropDownContent a:hover {
-    background-color: #ffff;
+    background-color: #FFFFFF;
 }
 
 .dropdown:hover .dropDownContent {
-display: block;
+    display: block;
+}
+
+.sections {
+    /* border: solid black 2px; */
+    /* margin: .5%; */
+}
+
+#sectionOne {
+    margin: 0%;
+    background-image: url("/assets/Photos/hero4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: 75vh;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+
+#SCDLogo {
+    height: 10px;
+    width: auto;
+}
+
+.heroImageText {
+    background-color: #FFFFFF;
+    opacity: .6;
+    font-size: 4em;
+    padding: 10px;
+}
+
+#sectionTwo {
+    text-align: center;
+    background-color: #006666;
+    background-size: cover;
+    height: auto;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    margin-top: 0%;
+}
+
+
+#sectionThree {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#sectionFour img {
+    margin-top: 50px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 600px;
+}
+
+#sectionFour h1 {
+    border: dashed 1px black;
+    margin-top: 30%;
+}
+
+
+
+#sectionFive img {
+    /* display: block; */
+    /* margin-right: 100%; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 600px;
+}
+
+#sectionFive h1 {
+    border: dashed 1px black;
+    margin-top: 30%;
+}
+
+#sectionSix {
+    text-align: center;
+    padding: 1%;
+}
+
+#cardBoxes {
+    font: 100;
+}
+
+footer {
+    margin: auto;
+    border: solid 2px black;
 }
