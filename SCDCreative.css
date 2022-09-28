@@ -150,7 +150,7 @@ body {
 
 #sectionOne {
     margin: 0%;
-    background-image: url("https://abelwatson.github.io/SCDCreative/assets/Photos/hero4.jpg");
+    background-image: url("/assets/Photos/hero4.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
