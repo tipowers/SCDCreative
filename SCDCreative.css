@@ -1,23 +1,106 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint ==phone {
+        @media only screen and (max-width: 37.5em) {
+            @content;
+        }
+
+        //600px
+    }
+
+    @if $breakpoint ==s-hundred {
+        @media only screen and (max-width: 43.75em) {
+            @content;
+        }
+
+        //700px
+    }
+
+    @if $breakpoint ==tab-port {
+        @media only screen and (max-width: 56.25em) {
+            @content;
+        }
+
+        //900px
+    }
+
+    @if $breakpoint ==tab-land {
+        @media only screen and (max-width: 75em) {
+            @content;
+        }
+
+        //1200px
+    }
+
+    @if $breakpoint ==big-desktop {
+        @media only screen and (min-width: 112.5em) {
+            @content;
+        }
+
+        //1800
+    }
+}
+
+html {
+    font-size: 80%;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 body {
     background-color: #FFFFFF;
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    font-family: "Montserrat", sans-serif;
 }
 
-.navbar {
-    background-color: #FFFFFF;
-    margin: 1%;
-    font-size: 120%;
-    text-align: right;
-}
-
-.navLinks {
-    list-style: none;
-}
-
-.dropdown {
+.header {
+    height: 5vh;
     position: relative;
-    display: inline-block;
-    width: 170px;
+}
+
+.headerNav {
+    /* height: 9vh; */
+    background-color: #FFFFFF;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem 2rem 1rem 2rem;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+}
+
+.headerList {
+    list-style: none;
+    display: flex;
+    
+    @include respond(s-hundred) {
+        display: none;
+    }
+}
+
+.headerItem {
+    margin-right: 5rem;
+}
+
+.headerLink {
+    font-size: 1.6rem;
+    color: #006666;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+:hover {
+    font-weight: 600;
+    transition: all 0.3s;
 }
 
 .dropDownContent {
@@ -48,9 +131,21 @@ body {
     display: block;
 }
 
+.navigation {
+    display: none;
+    @include respond(s-hundred) {
+        display: block;
+    }
+    z-index: 2000;
+}
+
+.navigationCheckbox {
+    display: none;
+}
+
 .sections {
-    /* border: solid black 2px; */
-    /* margin: .5%; */
+    border: solid black 2px;
+    margin: .5%;
 }
 
 #sectionOne {
@@ -65,10 +160,11 @@ body {
     padding-left: 100px;
 }
 
-#SCDLogo {
-    height: 10px;
+/* 
+.headerLogo {
+    height: 10%;
     width: auto;
-}
+} */
 
 .heroImageText {
     background-color: #FFFFFF;
