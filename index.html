@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/assets/SCD Revised Logo - 8.16.22.png" type="image/x-ico" />
+        <link rel="icon" href="https://abelwatson.github.io/SCDCreative/assets/SCD Revised Logo - 8.16.22.png"
+            type="image/x-ico" />
         <title>SCD Creative</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -17,7 +18,8 @@
             <nav class="headerNav" id="navbar">
                 <ul class="headerList">
                     <li class="headerItem"><a href="index.html" class="headerLogo"><img
-                                src="./assets/SCD Revised Logo - 8.16.22.png" style="width: 5vh;"></a></li>
+                                src="https://abelwatson.github.io/SCDCreative/assets/SCD Revised Logo - 8.16.22.png"></a>
+                    </li>
                     <li class="headerItem"><a href="./SCDCreativeKBR.html" class="headerLink">Kitchen/Bathroom
                             Remodeling</a></li>
                     <li class="headerItem"><a href="./SCDCreativeIED.html" class="headerLink">Interior/Exterior
@@ -37,24 +39,24 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="navigation">
-                    <input type="checkbox" class="navigationCheckbox" id="navi-toggle" />
-                    <label for="navi-toggle"><span class="navigationIcon"></span></label>
-                    <div class="navigationBackground"></div>
-                    <nav class="navigationNav">
-                        <ul class="navigationList">
-                            <li class="navigationItem"><a href="index.html" class="navigationLink"><img src="./assets/SCD Revised Logo - 8.16.22.png" style="width: 5vh;"></a></li>
-                            <li class="navigationItem"><a href="./SCDCreativeKBR.html" class="navigationLink">Kitchen/Bathroom Remodeling</a></li>
-                            <li class="navigationItem"><a href="./SCDCreativeIED.html" class="navigationLink">Interior/Exterior Design</a></li>
-                            <li class="navigationItem"><a href="./SCDCreativeSR.html" class="navigationLink">Structural Repair</a></li>
-                            <li class="navigationItem"><a class="navigationLink" href="./SCDCreativeOS.html">Other Services</a></li>
-                            <li class="navigationItem"><a class="navigationLink" href="./SCDCreativePG.html">Photo Gallery</a></li>
-                            <li class="navigationItem"><a class="navigationLink" href="./SCDCreativePP.html">Pricing & Payments</a></li>
-                            <li class="navigationItem"><a class="navigationLink" href="./SCDCreativeAU.html">About Us</a></li>
-                            <li class="navigationItem"><a class="navigationLink" href="#" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">Contact Us</a></li>
-                        </ul>
-                    </nav>
+                <div class="mobileNav">
+                    <div class="navigation">
+                        <a href="#home" class="active">
+                            <img src="https://abelwatson.github.io/SCDCreative/assets/SCD Revised Logo - 8.16.22.png" style="width: 8vh"></a>
+                        <div id="myLinks">
+                            <a href="./SCDCreativeKBR.html">Kitchen/Bathroom Remodeling</a>
+                            <a href="./SCDCreativeIED.html">Interior/Exterior Design</a>
+                            <a href="./SCDCreativeSR.html">Structural Repair</a>
+                            <a href="./SCDCreativeOS.html">Other Services</a>
+                            <a href="./SCDCreativePG.html">Photo Gallery</a>
+                            <a href="./SCDCreativePP.html">Pricing & Payments</a>
+                            <a href="./SCDCreativeAU.html">About Us</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Us</a>
+                        </div>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars">
+                        </a>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -98,7 +100,7 @@
         <section class="container" id="sectionFive">
             <div class="row">
                 <div class="col">
-                    <img src="https://abelwatson.github.io/SCDCreative/assets/Photos/Farm 1.jpg" alt="">
+                    <img src="https://abelwatson.github.io/SCDCreative/assets/Photos/Farm 2.jpg" alt="">
                 </div>
                 <div class="col text-center">
                     <h1>Blurb</h1>
@@ -272,6 +274,16 @@
                 </div>
             </div>
         </section>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
             crossorigin="anonymous"></script>

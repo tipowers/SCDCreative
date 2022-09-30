@@ -1,44 +1,131 @@
-@mixin respond($breakpoint) {
-    @if $breakpoint ==phone {
-        @media only screen and (max-width: 37.5em) {
-            @content;
-        }
-
-        //600px
+@media (min-width:800px) {
+    .header {
+        height: 5vh;
+        position: relative;
     }
 
-    @if $breakpoint ==s-hundred {
-        @media only screen and (max-width: 43.75em) {
-            @content;
-        }
-
-        //700px
+    .headerNav {
+        height: 9vh;
+        background-color: #FFFFFF;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 2rem 2rem 1rem 2rem;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 100;
+        width: 100%;
+    }
+    
+    .headerList {
+        list-style: none;
+        display: flex;
     }
 
-    @if $breakpoint ==tab-port {
-        @media only screen and (max-width: 56.25em) {
-            @content;
-        }
-
-        //900px
+    .headerItem {
+        margin-right: 5rem;
     }
 
-    @if $breakpoint ==tab-land {
-        @media only screen and (max-width: 75em) {
-            @content;
-        }
-
-        //1200px
+    .headerItem img {
+        width: 3.5rem
     }
 
-    @if $breakpoint ==big-desktop {
-        @media only screen and (min-width: 112.5em) {
-            @content;
-        }
+    .headerLink {
+        font-size: 1.6rem;
+        color: #006666;
+        font-weight: 400;
+        text-decoration: none;
+    }
 
-        //1800
+    .headerLink:hover {
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+
+    .dropDownContent {
+        display: none;
+        background-color: #FFFFFF;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropDownContent.a {
+        display: block;
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .dropdown:hover .dropBtn {
+        background-color: #FFFFFF;
+    }
+
+    .dropDownContent a:hover {
+        background-color: #FFFFFF;
+    }
+
+    .dropdown:hover .dropDownContent {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
     }
 }
+
+@media (max-width:799px) {
+    .headerList {
+        display: none;
+    }
+
+    .mobileNav {
+        max-width: 100%;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    .navigation {
+        overflow: hidden;
+        background-color: #006666;
+        position: relative;
+    }
+
+    .navigation #myLinks {
+        display: none;
+    }
+
+    .navigation a {
+        color: white;
+        padding: 3vh;
+        text-decoration: none;
+        display: block;
+    }
+
+    .navigation a.icon {
+        background-color: #006666;
+        display: relative;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navigation a:hover {
+        background-color: #006666;
+        color: #669966;
+    }
+
+    .active {
+        background-color: #FFFFFF;
+        color: white;
+    }
+}
+
+
+
 
 html {
     font-size: 80%;
@@ -58,99 +145,14 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-.header {
-    height: 5vh;
-    position: relative;
-}
-
-.headerNav {
-    /* height: 9vh; */
-    background-color: #FFFFFF;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 2rem 2rem 1rem 2rem;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 100;
-    width: 100%;
-}
-
-.headerList {
-    list-style: none;
-    display: flex;
-    
-    @include respond(s-hundred) {
-        display: none;
-    }
-}
-
-.headerItem {
-    margin-right: 5rem;
-}
-
-.headerLink {
-    font-size: 1.6rem;
-    color: #006666;
-    font-weight: 400;
-    text-decoration: none;
-}
-
-:hover {
-    font-weight: 600;
-    transition: all 0.3s;
-}
-
-.dropDownContent {
-    display: none;
-    background-color: #FFFFFF;
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.dropDownContent.a {
-    display: block;
-    color: black;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.dropdown:hover .dropBtn {
-    background-color: #FFFFFF;
-}
-
-.dropDownContent a:hover {
-    background-color: #FFFFFF;
-}
-
-.dropdown:hover .dropDownContent {
-    display: block;
-}
-
-.navigation {
-    display: none;
-    @include respond(s-hundred) {
-        display: block;
-    }
-    z-index: 2000;
-}
-
-.navigationCheckbox {
-    display: none;
-}
-
-.sections {
+/* .sections {
     border: solid black 2px;
     margin: .5%;
-}
+} */
 
 #sectionOne {
     margin: 0%;
-    background-image: url("/assets/Photos/hero4.jpg");
+    background-image: url("https://abelwatson.github.io/SCDCreative/assets/Photos/hero4.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -229,5 +231,5 @@ body {
 
 footer {
     margin: auto;
-    border: solid 2px black;
+    /* border: solid 2px black; */
 }
