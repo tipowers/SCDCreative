@@ -1,7 +1,8 @@
-@media (min-width:800px) {
+@media (min-width:1000px) {
     .header {
         height: 5vh;
         position: relative;
+        width: 100%;
     }
 
     .headerNav {
@@ -18,7 +19,7 @@
         z-index: 100;
         width: 100%;
     }
-    
+
     .headerList {
         list-style: none;
         display: flex;
@@ -42,6 +43,7 @@
     .headerLink:hover {
         font-weight: 600;
         transition: all 0.3s;
+        color: #006666;
     }
 
     .dropDownContent {
@@ -77,49 +79,54 @@
     }
 }
 
-@media (max-width:799px) {
+@media (max-width:999px) {
+    .header {
+        position: fixed;
+        width: 100%;
+    }
+
     .headerList {
         display: none;
     }
 
-    .mobileNav {
-        max-width: 100%;
-        margin: auto;
-        border-radius: 10px;
-    }
-
+    /* Style the navigation menu */
     .navigation {
         overflow: hidden;
-        background-color: #006666;
+        background-color: #333;
         position: relative;
     }
 
+    /* Hide the links inside the navigation menu (except for logo/home) */
     .navigation #myLinks {
         display: none;
     }
 
+    /* Style navigation menu links */
     .navigation a {
         color: white;
-        padding: 3vh;
+        padding: 14px 16px;
         text-decoration: none;
+        font-size: 17px;
         display: block;
     }
 
+    /* Style the hamburger menu */
     .navigation a.icon {
-        background-color: #006666;
-        display: relative;
+        display: block;
         position: absolute;
         right: 0;
         top: 0;
     }
 
+    /* Add a grey background color on mouse-over */
     .navigation a:hover {
-        background-color: #006666;
-        color: #669966;
+        background-color: #ddd;
+        color: black;
     }
 
+    /* Style the active link (or home/logo) */
     .active {
-        background-color: #FFFFFF;
+        background-color: #04AA6D;
         color: white;
     }
 }
@@ -128,7 +135,7 @@
 
 
 html {
-    font-size: 80%;
+    font-size: 50%;
     scroll-behavior: smooth;
 }
 
@@ -142,7 +149,11 @@ body {
 
 body {
     background-color: #FFFFFF;
-    font-family: "Montserrat", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    z-index: 1000;
 }
 
 /* .sections {
@@ -155,7 +166,7 @@ body {
     background-image: url("https://abelwatson.github.io/SCDCreative/assets/Photos/hero4.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    /* background-size: cover; */
     width: auto;
     height: 75vh;
     padding-top: 100px;
@@ -223,6 +234,7 @@ body {
 #sectionSix {
     text-align: center;
     padding: 1%;
+    position: relative;
 }
 
 #cardBoxes {
@@ -232,4 +244,5 @@ body {
 footer {
     margin: auto;
     /* border: solid 2px black; */
+    position: relative;
 }
